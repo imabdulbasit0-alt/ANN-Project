@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Customer Purchase Prediction</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Customer Purchase Prediction</h1>
+      <p class="subtitle">Logistic Regression · Social Network Ads dataset</p>
+    </header>
+
+    <form id="predict-form" class="card">
+      <div class="field">
+        <label for="gender">Gender</label>
+        <select id="gender" name="Gender" required>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="age">Age</label>
+        <input id="age" name="Age" type="number" min="10" max="100" value="30" required />
+      </div>
+
+      <div class="field">
+        <label for="salary">Estimated Salary</label>
+        <input id="salary" name="EstimatedSalary" type="number" min="0" step="1000" value="50000" required />
+      </div>
+
+      <button type="submit">Predict</button>
+    </form>
+
+    <div id="result" class="result hidden"></div>
+
+    <footer>
+      <small>SZABIST-ISB · ANN BS (AI)-5B · Department of Robotics &amp; AI</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
